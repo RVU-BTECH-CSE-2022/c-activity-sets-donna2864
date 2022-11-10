@@ -3,11 +3,13 @@
 float input();
 float square_root(float n);
 void output(float n, float sqrroot);
-int main(){
+int main()
+{
   float n, sqrroot;
   printf("Enter number: ");
   n =input();
   sqrroot = square_root(n);
+  output(n, sqrroot);
 }
 float input(){
   float n;
@@ -15,8 +17,13 @@ float input(){
   return n;
 }
 float square_root(float n){
-  float sqrroot;
-  sqrroot = sqrt(n);
+  float sqrroot, temp;
+  sqrroot = n/2;
+  temp = 0;
+  while( sqrroot != temp){
+    temp = sqrroot;
+    sqrroot = (n/temp+temp)/2;
+  }
   return sqrroot;
 }
 void output(float n, float sqrroot){
