@@ -1,5 +1,7 @@
 #include<stdio.h>
-int main(void){
-  printf("My name is Donna.R \n");
-  return 0;
+int main(){
+ char name[10];
+  printf("enter your name: ");
+  scanf("%s", name);
+  printf("My name is %s\n", name);
 }
